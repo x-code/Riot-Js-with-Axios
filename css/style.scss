@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+$header-height: 75px;
+$footer-height: 100px;
+
+.app {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    .wrapper {
+        min-height: 100%;
+        margin-bottom: -1 * $footer-height;
+        .header {
+            text-align: center;
+            background-color: blue;
+            height: $header-height;
+            line-height: $header-height;
+            display: block;
+        }
+        .content {
+            display: block;
+            padding: 15px;
+            .post {
+                width:  750px; // sorry, not responsive whatsoever.  just for the example.
+                border: 1px solid black;
+                display: block;
+                margin: 15px auto;
+                padding: 10px;
+                background-color: white;
+                border-radius: 0px 10px;
+            }
+            .post-search {
+                margin: 15px auto;
+                width: 750px;
+                > input,
+                label {
+                    display: block;
+                    margin: 5px 0;
+                }
+            }
+        }
+        .push {
+            height: $footer-height;
+        }
+    }
+    .footer {
+        height: $footer-height;
+        line-height: $footer-height;
+        display: block;
+        background-color: blue;
+        text-align: center;
+    }
+}

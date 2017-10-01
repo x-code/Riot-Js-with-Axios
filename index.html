@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Riot JS with Lumen | Article Management</title>
+        
+         <script src="js/vendor/riot.min.js"></script>
+        <script src="js/vendor/axios.min.js"></script>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        
+        <!-- load the tags up -->
+        <script src="js/components/header.tag" type="riot/tag"></script>
+        <script src="js/components/footer.tag" type="riot/tag"></script>
+        <script src="js/components/tbody.tag" type="riot/tag"></script>
+        <script src="js/components/modal-custom.tag" type="riot/tag"></script>
+        <script src="js/components/app.tag" type="riot/tag"></script>
+    </head>
+    <body>
+        <app class="app"></app>
+        <modal-edit>
+        </modal-edit>
+        <script>
+            var rootUrl = 'http://localhost:8000/news';
+            axios.get(rootUrl+'/')
+            .then(function(data) {
+                 console.log(data);
+                riot.mount('app', {'data': data.data});
+            })
+            .catch(function(error) {
+                console.log('error');
+            });
+
+        </script>
+    </body>
+</html>

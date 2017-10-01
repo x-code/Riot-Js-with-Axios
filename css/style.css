@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box; }
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+.app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: block; }
+  .app .header {
+      vertical-align: middle;
+      text-align: center;
+      display: block;
+  }
+
+  .app .header .h2{
+    margin-bottom: 10px;
+  }
+
+  .app .top-bar {
+      margin: 10px;
+  }
+  .app .footer {
+    height: 100px;
+    line-height: 100px;
+    display: block;
+    background-color: #ececec;
+    text-align: center; 
+  }
+
+  .app .footer .credit{
+    margin: 10px;
+  }
+
+  #add-modal {
+    visibility: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    height:100%;
+    text-align:center;
+    z-index: 1000;
+ }
+
+  #edit-modal {
+    visibility: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    height:100%;
+    text-align:center;
+    z-index: 1000;
+ }
+
+ #delete-modal {
+    visibility: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    height:100%;
+    text-align:center;
+    z-index: 1000;
+ }
+
